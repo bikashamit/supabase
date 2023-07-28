@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/supabase/static/css/main.e6c13ad2.css",
+    "main.js": "/supabase/static/js/main.92ad44df.js",
+    "static/js/787.5d68a2b6.chunk.js": "/supabase/static/js/787.5d68a2b6.chunk.js",
+    "index.html": "/supabase/index.html",
+    "main.e6c13ad2.css.map": "/supabase/static/css/main.e6c13ad2.css.map",
+    "main.92ad44df.js.map": "/supabase/static/js/main.92ad44df.js.map",
+    "787.5d68a2b6.chunk.js.map": "/supabase/static/js/787.5d68a2b6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.92ad44df.js"
+  ]
+}
