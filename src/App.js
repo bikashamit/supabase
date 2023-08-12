@@ -8,8 +8,11 @@ export const supabase = createClient(supabaseUrl, supabaseKey);
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const videoUrl = 'https://ldyjihpggrptzhxdsghv.supabase.co/storage/v1/object/public/test/2020-04-23-140008407.mp4?t=2023-08-12T05%3A24%3A21.201Z'; // Replace with your video's path
+  const videoSource = `${supabase.storageUrl}/${videoUrl}`;
 
   useEffect(() => {
+    //fetching data from database
     const fetchTodos = async () => {
       try {
         const { data, error } = await supabase.from('todos').select('*');
@@ -20,23 +23,12 @@ function App() {
       } catch (error) {
         console.error('Error fetching todos:', error.message);
       }
-    };
 
+
+    };
     fetchTodos();
+    //bucket explore
 
-    const todosSubscription = supabase.channel('custom-insert-channel')
-    .on(
-      'postgres_changes',
-      { event: 'INSERT', schema: 'public', table: 'todos' },
-      (payload) => {
-        console.log('Change received!', payload)
-      }
-    )
-    .subscribe()
-
-    return () => {
-      todosSubscription.unsubscribe();
-    };
   }, []);
 
   return (
@@ -47,6 +39,15 @@ function App() {
           <li key={todo.id}>{todo.task}</li>
         ))}
       </ul>
+      <div>
+        <div>
+          <h1>Video Player</h1>
+          <video controls width="600" height="400">
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
     </div>
   );
 }
