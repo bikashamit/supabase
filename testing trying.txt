@@ -1,0 +1,2 @@
+bikashamitgangaur
+ npx supabase functions deploy --no-verify-jwt hello-world --project-ref ldyjihpggrptzhxdsghv

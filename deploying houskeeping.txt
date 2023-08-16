@@ -1,0 +1,7 @@
+curl --request POST 'https://ldyjihpggrptzhxdsghv.functions.supabase.co/hello-world-amit' \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxkeWppaHBnZ3JwdHpoeGRzZ2h2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODc1MzgwNjEsImV4cCI6MjAwMzExNDA2MX0.lwZ2KFNEnIDWacDva_0nlS5B07c3BYB0Qxee6pdC04M' \
+  --header 'Content-Type: application/json' \
+  --data '{ "name":"Functions" }'
+npx supabase functions deploy --no-verify-jwt hello-world --project-ref ldyjihpggrptzhxdsghv
+setx SUPABASE_ACCESS_TOKEN sbp_bb8a4a080c2cf519bbed692543682cbf98f8cd2d
+npx supabase functions deploy hello-world --project-ref ldyjihpggrptzhxdsghv --debug
