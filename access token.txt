@@ -1,3 +1,1 @@
 
-setx SUPABASE_ACCESS_TOKEN sbp_bb8a4a080c2cf519bbed692543682cbf98f8cd2d
-db password: bikashamitgangaur
