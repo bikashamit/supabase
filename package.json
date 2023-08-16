@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
   "name": "superbase",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@supabase/auth-ui-react": "^0.4.2",
+=======
+  "homepage": "https://bikashamit.github.io/supabase",
+  "name": "realtimefunction",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+>>>>>>> origin/main
     "@supabase/supabase-js": "^2.26.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,8 +22,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
     "supa": "supabase",
     "start": "react-scripts start",
+=======
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+>>>>>>> origin/main
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,6 +53,10 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "supabase": "^1.75.3"
+=======
+    "gh-pages": "^5.0.0"
+>>>>>>> origin/main
   }
 }
